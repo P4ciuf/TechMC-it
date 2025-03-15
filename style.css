@@ -71,3 +71,13 @@ footer {
     padding: 15px;
     background: #222;
 }
+
+.typing-text::after {
+    content: "|";
+    display: inline-block;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
