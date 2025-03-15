@@ -75,9 +75,65 @@ footer {
 .typing-text::after {
     content: "";
     display: inline-block;
-    animation: blink 0.8s infinite;
+    animation: blink 0.4s infinite;
 }
 
 @keyframes blink {
     50% { opacity: 0; }
+}
+
+/* Stile base della navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 1000;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4a90e2, #0056b3); /* Gradiente di colore */
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+.linea-elegante {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
+    width: 80%;
+    margin: 20px auto;
+}
+
+.menu {
+    width: 100%; 
+    max-width: 1200px; 
+}
+
+@media (max-width: 768px) {
+    .menu {
+        font-size: 14px; 
+        padding: 10px; 
+    }
 }
