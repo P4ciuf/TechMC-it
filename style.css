@@ -73,7 +73,7 @@ footer {
 }
 
 .typing-text::after {
-    content: "|";
+    content: "";
     display: inline-block;
     animation: blink 0.8s infinite;
 }
