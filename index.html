@@ -6,33 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThugZone</title>
     <link rel="icon" type="image/png" href="assets/fp.png">
-
-    <style>
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1e1e1e;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #4a90e2, #0056b3);
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #0056b3;
-        }
-
-        @media screen and (max-width: 768px) {
-            nav {
-                display: none;
-            }
-            ::-webkit-scrollbar {
-                display: none;
-            }
-        }
-    </style>
-
 </head>
 <body>
     <header>
@@ -73,10 +46,10 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             function typeEffect(element, speed) {
-                if (element.classList.contains("typed")) return; 
+                if (element.classList.contains("typed")) return;
 
                 const text = element.getAttribute("data-text");
-                element.textContent = ""; 
+                element.textContent = "";
                 let i = 0;
 
                 function type() {
@@ -85,7 +58,7 @@
                         i++;
                         setTimeout(type, speed);
                     } else {
-                        element.classList.add("typed"); 
+                        element.classList.add("typed");
                     }
                 }
 
