@@ -4,11 +4,9 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThugZone
-    <link rel="stylesheet" href="style.css">
-    <link rel="png" type="assets/fp.png" href="assets/fp.png">
-    <title>ThugZone - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ThugZone</title>
+    <link rel="icon" type="image/png" href="assets/fp.png">
+
     <style>
         ::-webkit-scrollbar {
             width: 10px;
@@ -24,13 +22,17 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #0056b3;
         }
+
         @media screen and (max-width: 768px) {
+            nav {
+                display: none;
+            }
             ::-webkit-scrollbar {
                 display: none;
             }
         }
     </style>
-    
+
 </head>
 <body>
     <header>
@@ -50,73 +52,62 @@
     </header>
     <div class="container" id="home">
         <h2 class="typing-text" data-text="Benvenuto su ThugZone"></h2>
-        <p class="typing-text" data-text="Unisciti alla community più attiva di Discord! 
-        Eventi, amicizie e tanto divertimento ti aspettano."></p>
+        <p class="typing-text" data-text="Unisciti alla community più attiva di Discord! Eventi, amicizie e tanto divertimento ti aspettano."></p>
     </div>
-    
+
     <div class="container" id="chi-siamo">
         <h2 class="typing-text" data-text="Chi Siamo"></h2>
-        <p class="typing-text" data-text="Benvenuto su ThugZone! 🌟 
-        Un server Minecraft dove avventura, creatività e divertimento non mancano mai! 🎮✨ 
-        Siamo una community di giocatori appassionati, sempre pronti a creare nuove esperienze 
-        e a vivere emozioni uniche insieme."></p>
+        <p class="typing-text" data-text="Benvenuto su ThugZone! 🌟 Un server Minecraft dove avventura, creatività e divertimento non mancano mai! 🎮✨ Siamo una community di giocatori appassionati, sempre pronti a creare nuove esperienze e a vivere emozioni uniche insieme."></p>
     </div>
-    
+
     <div class="container" id="storia">
         <h2 class="typing-text" data-text="La Nostra Storia"></h2>
-        <p class="typing-text" data-text="Tutto è iniziato con un sogno: creare un luogo 
-        dove la passione per Minecraft potesse unirci, divertirci e farci crescere insieme. 💭🎮 
-        Nel 2024, un gruppo di amici, uniti dalla voglia di costruire qualcosa di unico, 
-        ha deciso di dar vita a ThugZone, un server che non fosse solo un semplice spazio di gioco, 
-        ma una vera e propria comunità."></p>
+        <p class="typing-text" data-text="Tutto è iniziato con un sogno: creare un luogo dove la passione per Minecraft potesse unirci, divertirci e farci crescere insieme. 💭🎮 Nel 2024, un gruppo di amici, uniti dalla voglia di costruire qualcosa di unico, ha deciso di dar vita a ThugZone, un server che non fosse solo un semplice spazio di gioco, ma una vera e propria comunità."></p>
     </div>
-    
+
     <div class="container" id="team">
         <h2 class="typing-text" data-text="Il Nostro Team"></h2>
-        <p class="typing-text" data-text="Il nostro team è il cuore pulsante di questa community. 
-        Ogni giorno lavoriamo con passione per creare un ambiente accogliente, sicuro e coinvolgente 
-        per tutti."></p>
+        <p class="typing-text" data-text="Il nostro team è il cuore pulsante di questa community. Ogni giorno lavoriamo con passione per creare un ambiente accogliente, sicuro e coinvolgente per tutti."></p>
     </div>
-    
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-    function typeEffect(element, speed) {
-        if (element.classList.contains("typed")) return; // Evita ripetizioni
+            function typeEffect(element, speed) {
+                if (element.classList.contains("typed")) return; 
 
-        const text = element.getAttribute("data-text");
-        element.textContent = ""; // Resetta il contenuto
-        let i = 0;
+                const text = element.getAttribute("data-text");
+                element.textContent = ""; 
+                let i = 0;
 
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
+                function type() {
+                    if (i < text.length) {
+                        element.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(type, speed);
+                    } else {
+                        element.classList.add("typed"); 
+                    }
+                }
+
                 setTimeout(type, speed);
-            } else {
-                element.classList.add("typed"); // Segna come completato
             }
-        }
 
-        setTimeout(type, speed);
-    }
+            document.querySelectorAll(".typing-text").forEach(el => {
+                typeEffect(el, 50);
+            });
+        });
+    </script>
 
-    document.querySelectorAll(".typing-text").forEach(el => {
-        typeEffect(el, 50);
-    });
-});
-
-
-    </script>    
-    <hr className="linea-elegante" />
+    <hr class="linea-elegante" />
     <h2>Social</h2>
     <p>Entra nella nostra community su
         <a href="https://discord.gg/KCcQAT4dkb" target="_blank" rel="noopener">Discord</a> 
         e su
-        <a href="https://whatsapp.com/channel/0029Vb58fpU3wtb28O4w2g1m" target="_blank" rel="noopener">whatsapp</a>.
-      </p> 
+        <a href="https://whatsapp.com/channel/0029Vb58fpU3wtb28O4w2g1m" target="_blank" rel="noopener">Whatsapp</a>.
+    </p>
+
     <footer>
         <p>By P4ciuf - TechTribe Studio</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
