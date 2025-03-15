@@ -131,9 +131,9 @@ footer {
     max-width: 1200px; 
 }
 
-@media (max-width: 768px) {
-    .menu {
-        font-size: 14px; 
-        padding: 10px; 
+@media (max-width: 1000px) {
+    .menu { 
+        display: none; 
     }
 }
+
