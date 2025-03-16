@@ -8,21 +8,23 @@
     <link rel="icon" type="image/png" href="assets/fp.png">
 </head>
 <body>
+
     <div id="intro">
         <img src="assets/fp.png" alt="Logo" id="intro-logo">
         <h1 id="intro-text"></h1>
     </div>    
-</body>
-<body>
-        <h1 id="typing-text"></h1>
+
     <video autoplay muted loop id="background-video">
-        <source src="sfondo2.mp4" type="video/mp4">
+        <source src="assets/sfondo2.mp4" type="video/mp4">
         Il tuo browser non supporta i video in background.
     </video>    
+
     <header>
         <div class="logo-container">
             <img src="assets/fp.png" alt="ThugZone Logo" class="logo">
-            <h1 class="top-title"><a href="https://discord.gg/KCcQAT4dkb" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">ThugZone</a></h1>
+            <h1 class="top-title">
+                <a href="https://discord.gg/KCcQAT4dkb" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">ThugZone</a>
+            </h1>
         </div>
         <nav>
             <ul>
@@ -32,8 +34,9 @@
                 <li><a href="#team">Il Nostro Team</a></li>
                 <li><a href="#social">Social</a></li>
             </ul>
-        </nav>
+        </nav>              
     </header>
+
     <div class="container" id="home">
         <h2 class="typing-text" data-text="Benvenuto su ThugZone"></h2>
         <p class="typing-text" data-text="Unisciti alla community più attiva di Discord! Eventi, amicizie e tanto divertimento ti aspettano."></p>
@@ -79,35 +82,33 @@
                 typeEffect(el, 50);
             });
         });
-    </script>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let text = "ThugZoneMC"; 
-        let introText = document.getElementById("intro-text");
-        let i = 0;
-    
-        function typeWriter() {
-            if (i < text.length) {
-                introText.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 5);
-            } else {
-                setTimeout(() => {
-                    document.getElementById("intro").style.opacity = "0";
+        document.addEventListener("DOMContentLoaded", function () {
+            let text = "ThugZoneMC"; 
+            let introText = document.getElementById("intro-text");
+            let i = 0;
+
+            function typeWriter() {
+                if (i < text.length) {
+                    introText.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                } else {
                     setTimeout(() => {
-                        document.getElementById("intro").style.display = "none";
-                    }, 1000);
-                }, 3000);
+                        document.getElementById("intro").style.opacity = "0";
+                        setTimeout(() => {
+                            document.getElementById("intro").style.display = "none";
+                        }, 1000);
+                    }, 3000);
+                }
             }
-        }
-    
-        typeWriter();
-    });
+
+            typeWriter();
+        });
     </script>   
 
     <hr class="linea-elegante" />
-    <h2>Social</h2>
+    <h2 id="social">Social</h2>
     <p>Entra nella nostra community su
         <a href="https://discord.gg/KCcQAT4dkb" target="_blank" rel="noopener">Discord</a> 
         e su
@@ -117,5 +118,6 @@
     <footer>
         <p>By P4ciuf - TechTribe Studio</p>
     </footer>
+
 </body>
 </html>
