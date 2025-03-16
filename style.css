@@ -168,3 +168,85 @@ footer {
         display: none; 
     }
 }
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Sfondo Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    z-index: 1;
+    transition: opacity 1s ease-out;
+}
+
+#intro-logo {
+    width: 150px; 
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes typing {
+    from { max-width: 0; }
+    to { max-width: 100%; }
+}
+
+@keyframes blinkCursor {
+    50% { opacity: 0; }
+}
+
+#intro-text {
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 0;
+    animation: typing 3s steps(30) forwards, fadeIn 2s;
+    caret-color: transparent;
+}
+
+#intro-text::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: white;
+    animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes removeCursor {
+    to { border-right: none; }
+}
+
+#intro-text.finished {
+    border-right: none;
+}
