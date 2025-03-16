@@ -14,7 +14,6 @@ header {
     justify-content: space-between;
     align-items: center;
     background: #222;
-    padding: 15px 30px;
 }
 
 /* Logo e nome */
@@ -35,15 +34,22 @@ h1 {
 }
 
 /* Navbar */
+nav {
+    display: flex;
+    align-items: center; /* Allinea verticalmente il testo e il logo */
+    padding: 10px 20px; /* Aggiusta il padding se necessario */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    margin-left: auto; /* Sposta il menu a destra */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 15px; /* Spazio tra gli elementi */
 }
 
 nav a {
@@ -97,11 +103,9 @@ footer {
     z-index: 1000;
 }
 
-
 ::-webkit-scrollbar {
     width: 10px; 
 }
-
 
 ::-webkit-scrollbar-track {
     background: #1e1e1e; 
@@ -112,7 +116,6 @@ footer {
     background: linear-gradient(180deg, #4a90e2, #0056b3); /* Gradiente di colore */
     border-radius: 10px;
 }
-
 
 ::-webkit-scrollbar-thumb:hover {
     background: #0056b3;
@@ -167,16 +170,6 @@ footer {
     ::-webkit-scrollbar {
         display: none; 
     }
-}
-
-#background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
 }
 
 /* Sfondo Video */
@@ -249,4 +242,14 @@ footer {
 
 #intro-text.finished {
     border-right: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 40px; /* Regola l'altezza del logo */
+    margin-right: 10px; /* Distanza tra logo e testo */
 }
