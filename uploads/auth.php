@@ -1,27 +1,18 @@
 <?php
 session_start();
 
-// Credenziali corrette
-$correct_username = "P4ciuf";
-$correct_password = "0987654123";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-// Ottieni dati dal form
-$username = $_POST['username'] ?? '';
-$password = $_POST['password'] ?? '';
-
-if ($username === $correct_username && $password === $correct_password) {
-    // Login riuscito
-    $_SESSION['loggedin'] = true;
-    header("Location: dashboard.html");
-    exit();
-} else {
-    // Login fallito
-    echo "<script>
-        alert('Errore: Username o password errati! Tornerai alla pagina di login.');
-        setTimeout(() => {
-            window.location.href = 'index.html';
-        }, 5000);
-    </script>";
-    exit();
+    // Controllo credenziali fisse
+    if ($username === 'admin' && $password === '1234') {
+        $_SESSION['user_id'] = 'admin';
+        header("Location: dashboard.php");
+        exit();
+    } else {
+        echo "Credenziali errate!";
+        header("refresh:2;url=login.html"); // Torna al login dopo 2 secondi
+    }
 }
 ?>
