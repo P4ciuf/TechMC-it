@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="images/Comando_Generale.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">🏠 Home</a></li>
+                <li><a href="#">🖼 Gestione Galleria</a></li>
+                <li><a href="#">📝 Modifica Testi</a></li>
+                <li><a href="#">📊 Statistiche</a></li>
+                <li><a href="#">⚙ Impostazioni</a></li>
+                <li><a href="login.html">🚪 Esci</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <header>
+            <h1>Benvenuto, Comando Generale de CC</h1>
+            <p>Gestisci il sito in modo semplice e veloce.</p>
+        </header>
+
+        <section class="cards">
+            <div class="card">
+                <h3>📸 Galleria</h3>
+                <p>Gestisci le immagini</p>
+                <button onclick="location.href='gallery.html'">Vai</button>
+            </div>
+            <div class="card">
+                <h3>📝 Modifica Testi</h3>
+                <p>Personalizza i contenuti</p>
+                <button onclick="location.href='edit_text.html'">Vai</button>
+            </div>
+            <div class="card">
+                <h3>📊 Statistiche</h3>
+                <p>Analizza il traffico</p>
+                <button onclick="location.href='stats.html'">Vai</button>
+            </div>
+            <div class="card">
+                <h3>⚙ Impostazioni</h3>
+                <p>Configura il sito</p>
+                <button onclick="location.href='settings.html'">Vai</button>
+            </div>
+        </section>
+    </main>
+    <script src="scripts/dashboard.js"></script>
+</body>
+</html>

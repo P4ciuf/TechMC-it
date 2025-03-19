@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impostazioni</title>
+    <link rel="stylesheet" href="styles/settings.css">
+</head>
+<body>
+    <header>
+        <h1>Gestione Impostazioni</h1>
+        <a href="dashboard.html" class="back-button">⬅ Torna al Pannello</a>
+    </header>
+
+    <main>
+        <form id="settings-form">
+            <label for="site-title">Titolo del Sito:</label>
+            <input type="text" id="site-title" name="site_title" required>
+
+            <label for="site-description">Descrizione:</label>
+            <textarea id="site-description" name="site_description" required></textarea>
+
+            <label for="maintenance-mode">Modalità Manutenzione:</label>
+            <select id="maintenance-mode" name="maintenance_mode">
+                <option value="off">Disattivata</option>
+                <option value="on">Attivata</option>
+            </select>
+
+            <button type="submit">Salva Impostazioni</button>
+        </form>
+    </main>
+
+    <script src="scripts/settings.js"></script>
+</body>
+</html>
